@@ -7,6 +7,6 @@
 <body>
         <p th:text ="${user.username}"></p>
         <p th:text ="${user.avataraddr}"></p>
-        <img th:src="@{'/avatar/' + ${user.avataraddr}}"/>
+        <img th:src="'/avatar/' + @{${user.avataraddr}}"/>
 </body>
 </html>
