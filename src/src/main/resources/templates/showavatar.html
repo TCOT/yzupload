@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>avatar</title>
+</head>
+<body>
+        <p th:text ="${user.username}"></p>
+        <p th:text ="${user.avataraddr}"></p>
+        <img th:src="@{'/avatar/' + ${user.avataraddr}}"/>
+</body>
+</html>
