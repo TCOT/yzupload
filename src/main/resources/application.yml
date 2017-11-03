@@ -10,3 +10,9 @@ spring:
       ddl-auto: update
   thymeleaf:
     cache: false
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,\
+                        classpath:/static/,classpath:/public/,file:${web.upload-path}
+  mvc:
+    static-path-pattern: /**
+web.upload-path: F:/test/

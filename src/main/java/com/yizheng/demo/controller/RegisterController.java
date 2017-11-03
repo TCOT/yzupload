@@ -48,14 +48,11 @@ public class RegisterController {
         if (!file.isEmpty()) {
             User user = new User();
             String filename = UUID.randomUUID().toString().replace("-","") + ".jpg";
-            System.out.println("----1");
             user.setUsername(username);
             try {
                 Files.write(file.getBytes(),
-                        new File("src\\main\\resources\\static\\avatar\\" + filename));
-                System.out.println("----2");
-                //user.setAvatarurl(ResponseEntity.ok(resourceLoader.getResource("file:" +" src\\main\\resources\\static\\avatar"+filename)).toString());
-                user.setAvatarurl("/avatar/" + filename);
+                        new File("F:\\test\\" + filename));
+                user.setAvatarurl(filename);
                 userRepository.save(user);
                 return "login";
             } catch (Exception e) {
