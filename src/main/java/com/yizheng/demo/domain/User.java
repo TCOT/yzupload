@@ -19,8 +19,7 @@ public class User {
 
     private String username;
 
-    @Column(columnDefinition = "varchar(64) binary")
-    private String avataraddr;
+    private String avatarurl;
 
     public User() {
     }
@@ -41,11 +40,11 @@ public class User {
         this.username = username;
     }
 
-    public String getAvataraddr() {
-        return avataraddr;
+    public String getAvatarurl() {
+        return avatarurl;
     }
 
-    public void setAvataraddr(String avataraddr) {
-        this.avataraddr = avataraddr;
+    public void setAvatarurl(String avatarurl) {
+        this.avatarurl = avatarurl;
     }
 }
