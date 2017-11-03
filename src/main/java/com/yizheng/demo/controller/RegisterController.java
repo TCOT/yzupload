@@ -47,7 +47,7 @@ public class RegisterController {
                                    @RequestParam("username") String username) throws IOException {
         if (!file.isEmpty()) {
             User user = new User();
-            String filename = UUID.randomUUID().toString() + ".jpg";
+            String filename = UUID.randomUUID().toString().replace("-","") + ".jpg";
             System.out.println("----1");
             user.setUsername(username);
             try {
